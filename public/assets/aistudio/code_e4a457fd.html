@@ -1,0 +1,796 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Zauza Bilqis Sumayya — Office Administration &amp; Archiving Specialist</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=JetBrains+Mono:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#111111',
+            surface: {
+              DEFAULT: '#1A1A1A',
+              hover: '#242424',
+              subtle: '#151515'
+            },
+            ink: {
+              DEFAULT: '#F4F4F2',
+              muted: '#9A9A96'
+            },
+            electric: {
+              DEFAULT: '#38BDF8',
+              soft: 'rgba(56, 189, 248, 0.14)'
+            },
+            line: 'rgba(255, 255, 255, 0.12)'
+          },
+          fontFamily: {
+            headline: ['"Archivo Black"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          letterSpacing: {
+            widestPlus: '0.14em',
+            tightPlus: '-0.03em'
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom CSS for specialized layout & metallic effects -->
+<style data-purpose="custom-typography-and-effects">
+    /* Metallic Silver Gradient for Hero Typography */
+    .metallic-headline {
+      background: linear-gradient(180deg, #FFFFFF 0%, #CBD2D9 42%, #8E96A0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 0.88;
+    }
+
+    /* Subdued subtle dot grid background pattern */
+    .bg-grid-subtle {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    /* Smooth Marquee Animation */
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marqueeScroll 28s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+
+    /* Folder Tab Aesthetic */
+    .folder-tab {
+      clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 100%, 0% 100%);
+    }
+
+    /* 3D Avatar Tilt Container */
+    .avatar-tilt-wrapper {
+      perspective: 1000px;
+      transform-style: preserve-3d;
+    }
+    .avatar-mesh {
+      transition: transform 0.14s cubic-bezier(0.2, 0.8, 0.2, 1);
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+
+    /* Snappy squash and stretch spring keyframe */
+    @keyframes avatarSquashSpring {
+      0% { transform: scale(1, 1); }
+      30% { transform: scale(0.92, 1.08); }
+      65% { transform: scale(1.05, 0.95); }
+      85% { transform: scale(0.98, 1.02); }
+      100% { transform: scale(1, 1); }
+    }
+    .animate-squash-spring {
+      animation: avatarSquashSpring 0.42s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    /* Floating poke particle */
+    @keyframes particleFloatUp {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, 0px) scale(0.7);
+      }
+      20% {
+        opacity: 1;
+        transform: translate(-50%, -15px) scale(1.15);
+      }
+      80% {
+        opacity: 0.9;
+        transform: translate(-50%, -40px) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -60px) scale(0.85);
+      }
+    }
+    .floating-poke-particle {
+      position: absolute;
+      pointer-events: none;
+      animation: particleFloatUp 0.75s ease-out forwards;
+      z-index: 40;
+    }
+  </style>
+</head>
+<body class="bg-obsidian text-ink font-sans antialiased selection:bg-electric selection:text-obsidian min-h-screen relative overflow-x-hidden">
+<!-- BEGIN: TopNavigationBar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-obsidian/85 backdrop-blur-md border-b border-line" data-purpose="site-navigation">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<!-- Minimalist Monogram / Brand -->
+<a class="font-mono text-xs tracking-widestPlus text-ink hover:text-electric transition-colors duration-200" href="#">
+        ZAUZA B. SUMAYYA <span class="text-electric">[ZBS]</span>
+</a>
+<!-- 4 Spaced Uppercase Links matching Image Layout -->
+<div class="flex items-center space-x-7 sm:space-x-12 font-mono text-xs tracking-widestPlus uppercase">
+<a class="text-ink hover:text-electric transition-colors duration-200" href="#about">About</a>
+<a class="text-ink hover:text-electric transition-colors duration-200" href="#experience">Experience</a>
+<a class="text-ink hover:text-electric transition-colors duration-200" href="#skills">Skills</a>
+<a class="text-ink hover:text-electric transition-colors duration-200" href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+<!-- END: TopNavigationBar -->
+<main>
+<!-- BEGIN: HeroSection -->
+<header class="relative min-h-screen pt-20 pb-12 flex flex-col justify-between items-center px-4 sm:px-8 border-b border-line overflow-hidden bg-grid-subtle">
+<!-- Top Oversized Edge-to-Edge Metallic Headline matching Image Layout -->
+<div class="w-full text-center mt-6 sm:mt-10 select-none pointer-events-none z-10">
+<h1 class="metallic-headline font-headline tracking-tightPlus text-[15vw] sm:text-[14vw] md:text-[13vw] uppercase">
+          HI, I'M ZAUZA
+        </h1>
+</div>
+<!-- Centerpiece Interactive Floating 3D Bust Avatar with Gaze Tilt & Poke Feedback -->
+<div class="relative z-20 my-auto py-4 flex flex-col items-center justify-center avatar-tilt-wrapper">
+<div class="avatar-mesh relative cursor-pointer group" id="avatarCard" title="Click to poke Zauza!" style="transform: rotateX(0deg) rotateY(0deg);">
+<!-- Subtle Glow Halo -->
+<div class="absolute -inset-4 bg-electric/10 rounded-full blur-2xl group-hover:bg-electric/25 transition-all duration-500"></div>
+<!-- The Floating Bust Portrait -->
+<img alt="3D stylized character portrait bust head of a young Indonesian woman wearing a neat dark charcoal/black hijab, smooth clean 3D render like Pixar or stylized digital character art, warm friendly gentle smile, brown almond eyes, soft studio lighting, isolated floating head on transparent or pure solid #111111 dark background, high detail, modern clean aesthetic." class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 object-contain drop-shadow-[0_24px_48px_rgba(0,0,0,0.85)] select-none pointer-events-auto transform transition-transform duration-300" id="avatarImg" src="https://lh3.googleusercontent.com/aida/ALJJyrCfkJ3oVWelh5OblSXezCgVw90jREFrGU_wyJuFpa1WkLxjsHT7PkrIVz3WjeU2emv1egq3MEhNOBFljoonXYCxsF686PtuWApIsmHGcHo5axzL-eLUEe-d5rqMHbLA8iQw_8iVR5Aj68n5B5Rs9K9ENBJYiatCUgGJkUO_9Vyp3nfb-bkvT4dOlkvk51CJLTupeIpuBFqGNNepXEF2EMtOBatRR2SnTQSa6Yq7FVJ-">
+<!-- Interactive Poke Toast / Indicator -->
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 font-mono text-[10px] tracking-widestPlus uppercase bg-surface border border-line px-3 py-1 rounded-full text-ink-muted group-hover:text-electric group-hover:border-electric transition-all shadow-lg pointer-events-none flex items-center space-x-1.5 whitespace-nowrap" id="pokeIndicator">
+<span class="w-1.5 h-1.5 rounded-full bg-electric animate-pulse"></span>
+<span id="pokeText">TAP TO POKE ✦</span>
+</div>
+</div>
+</div>
+<!-- Hero Bottom Row Info Bar -->
+<div class="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 pt-6 text-center md:text-left z-20">
+<!-- Role Statement (Left) -->
+<div class="max-w-md">
+<p class="font-mono text-[11px] leading-relaxed tracking-widestPlus uppercase text-ink-muted">
+            OFFICE ADMINISTRATION &amp; ARCHIVING SPECIALIST DRIVEN BY PRECISION, ORDER, AND YOUTH COLLABORATION.
+          </p>
+</div>
+<!-- Availability Status (Right) -->
+<div class="flex items-center space-x-2.5 font-mono text-[11px] tracking-widestPlus uppercase bg-surface/90 border border-line px-3.5 py-1.5 rounded-full">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+<span class="text-ink">BASED IN Jakarta, ID · OPEN FOR OPPORTUNITIES</span>
+</div>
+</div>
+</header>
+<!-- END: HeroSection -->
+<!-- BEGIN: PartnerTickerSection -->
+<section class="bg-surface-subtle border-b border-line py-4 overflow-hidden select-none" data-purpose="partners-marquee" id="partners">
+<div class="max-w-7xl mx-auto px-6 mb-2">
+<span class="font-mono text-[10px] uppercase tracking-widestPlus text-ink-muted block text-center sm:text-left">
+          [ TRUSTED &amp; COLLABORATED WITH ]
+        </span>
+</div>
+<div class="relative w-full overflow-hidden flex">
+<div class="animate-marquee whitespace-nowrap font-mono text-xs sm:text-sm tracking-widestPlus uppercase text-ink/80 flex items-center space-x-10">
+<span>SEKRETARIAT WAKIL PRESIDEN RI</span>
+<span class="text-electric">✦</span>
+<span>POLRES PURBALINGGA</span>
+<span class="text-electric">✦</span>
+<span>SMK NEGERI 1 PURBALINGGA</span>
+<span class="text-electric">✦</span>
+<span>PASKIBRA SMKN 1 PURBALINGGA (PASKAS)</span>
+<span class="text-electric">✦</span>
+<span>IKATAN SANTRI MIFTAHUSSALAM BANYUMAS</span>
+<span class="text-electric">✦</span>
+<span>UNIVERSITAS ISLAM INTERNASIONAL INDONESIA (UIII)</span>
+<span class="text-electric">✦</span>
+<!-- Duplicate items for seamless continuous marquee loop -->
+<span>SEKRETARIAT WAKIL PRESIDEN RI</span>
+<span class="text-electric">✦</span>
+<span>POLRES PURBALINGGA</span>
+<span class="text-electric">✦</span>
+<span>SMK NEGERI 1 PURBALINGGA</span>
+<span class="text-electric">✦</span>
+<span>PASKIBRA SMKN 1 PURBALINGGA (PASKAS)</span>
+<span class="text-electric">✦</span>
+<span>IKATAN SANTRI MIFTAHUSSALAM BANYUMAS</span>
+<span class="text-electric">✦</span>
+<span>UNIVERSITAS ISLAM INTERNASIONAL INDONESIA (UIII)</span>
+<span class="text-electric">✦</span>
+</div>
+</div>
+</section>
+<!-- END: PartnerTickerSection -->
+<!-- BEGIN: AboutSection -->
+<section class="py-24 px-6 sm:px-10 border-b border-line max-w-7xl mx-auto" data-purpose="about-and-education" id="about">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-16 pb-4 border-b border-line">
+<div>
+<span class="font-mono text-xs text-electric tracking-widestPlus uppercase block mb-1">[ 01 / PROFILE &amp; BACKGROUND ]</span>
+<h2 class="font-headline text-3xl sm:text-4xl uppercase tracking-tight text-ink">ABOUT ME</h2>
+</div>
+<span class="font-mono text-xs text-ink-muted uppercase mt-2 sm:mt-0 tracking-widestPlus">Cengkaraeng, JAKARTA BARAT, DKI JAKARTA</span>
+</div>
+<!-- Asymmetric 2-Column Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Editorial Story -->
+<div class="lg:col-span-7 space-y-6">
+<p class="text-xl sm:text-2xl font-sans font-medium text-ink leading-relaxed">
+            Lulusan <span class="text-electric">SMK Manajemen Perkantoran</span> dengan pengalaman langsung di tata kelola arsip instansi negara, kesekretariatan organisasi, serta koordinasi logistik acara skala kabupaten.
+          </p>
+<p class="text-ink-muted text-sm sm:text-base leading-relaxed">
+            Memiliki rekam jejak formal melalui Praktik Kerja Lapangan (PKL) di <strong>Sekretariat Wakil Presiden Republik Indonesia</strong> (Asisten Deputi Kesehatan, Gizi, dan Pembangunan Keluarga). Terbiasa memproses penataan ratusan berkas inaktif, pendataan fisik &amp; digital, hingga pemilahan arsip vital pembangunan Universitas Islam Internasional Indonesia (UIII).
+          </p>
+<p class="text-ink-muted text-sm sm:text-base leading-relaxed">
+            Di luar ranah kearsipan, saya aktif memegang tanggung jawab strategis sebagai <strong>Sekretaris II PASKIBRA SMKN 1 Purbalingga (PASKAS)</strong> dan <strong>Bendahara II Ikatan Santri</strong>, serta berpengalaman selama 3 tahun berturut-turut dalam kepanitiaan logistik LKBB Bhayangkara &amp; Polisi Cilik di POLRES Purbalingga.
+          </p>
+<!-- Action Buttons -->
+<div class="pt-4 flex flex-wrap gap-4 items-center font-mono text-xs tracking-widestPlus uppercase">
+<a class="px-6 py-3.5 bg-ink text-obsidian font-bold hover:bg-electric transition-colors duration-200 flex items-center space-x-2" href="#contact">
+<span>GET IN TOUCH</span>
+<span>↓</span>
+</a>
+<a class="px-6 py-3.5 border border-line bg-surface hover:border-electric text-ink hover:text-electric transition-colors duration-200 flex items-center space-x-2" href="mailto:bilqissumayya@gmail.com?subject=CV%20Request%20-%20Zauza%20Bilqis%20Sumayya">
+<span>DOWNLOAD CV / RESUME</span>
+<span>↗</span>
+</a>
+</div>
+</div>
+<!-- Right: Education & Quantitative Metrics Cards -->
+<div class="lg:col-span-5 space-y-6">
+<!-- Education Card -->
+<div class="bg-surface border border-line p-6 relative overflow-hidden group hover:border-electric transition-colors">
+<div class="flex items-center justify-between mb-4">
+<span class="font-mono text-xs text-electric uppercase tracking-widestPlus">PENDIDIKAN FORMAL</span>
+<span class="font-mono text-xs text-ink-muted">2023 – 2026</span>
+</div>
+<h3 class="font-sans font-bold text-lg text-ink">SMK Negeri 1 Purbalingga</h3>
+<p class="text-sm text-ink-muted mt-1">Konsentrasi Keahlian: Manajemen Perkantoran dan Layanan Bisnis (MPLB)</p>
+<div class="mt-4 pt-4 border-t border-line/50 flex flex-wrap gap-2">
+<span class="font-mono text-[10px] tracking-wider uppercase px-2.5 py-1 bg-obsidian border border-line text-ink-muted">Administrasi Perkantoran</span>
+<span class="font-mono text-[10px] tracking-wider uppercase px-2.5 py-1 bg-obsidian border border-line text-ink-muted">Kearsipan Fisik &amp; Digital</span>
+<span class="font-mono text-[10px] tracking-wider uppercase px-2.5 py-1 bg-obsidian border border-line text-ink-muted">Korespondensi Resmi</span>
+<span class="font-mono text-[10px] tracking-wider uppercase px-2.5 py-1 bg-obsidian border border-line text-ink-muted">Pengelolaan Kas Kecil</span>
+</div>
+</div>
+<!-- 2x2 Mini Key Stats Grid -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface border border-line p-5 hover:border-electric transition-colors">
+<div class="font-headline text-3xl text-ink">3 THN</div>
+<div class="font-mono text-[10px] text-ink-muted uppercase tracking-wider mt-1">
+                Kepanitiaan LKBB Polres Purbalingga
+              </div>
+</div>
+<div class="bg-surface border border-line p-5 hover:border-electric transition-colors">
+<div class="font-headline text-2xl text-electric pt-1">SETWAPRES</div>
+<div class="font-mono text-[10px] text-ink-muted uppercase tracking-wider mt-1">
+                PKL Asdep Kesehatan, Gizi &amp; SDM
+              </div>
+</div>
+<div class="bg-surface border border-line p-5 hover:border-electric transition-colors">
+<div class="font-headline text-3xl text-ink">BPH</div>
+<div class="font-mono text-[10px] text-ink-muted uppercase tracking-wider mt-1">
+                Sekretaris &amp; Bendahara Organisasi
+              </div>
+</div>
+<div class="bg-surface border border-line p-5 hover:border-electric transition-colors">
+<div class="font-headline text-3xl text-electric">100%</div>
+<div class="font-mono text-[10px] text-ink-muted uppercase tracking-wider mt-1">
+                Ketertiban &amp; Rekapitulasi Berkas
+              </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AboutSection -->
+<!-- BEGIN: ExperienceSection -->
+<section class="py-24 px-6 sm:px-10 border-b border-line max-w-7xl mx-auto" data-purpose="experience-and-projects" id="experience">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-16 pb-4 border-b border-line">
+<div>
+<span class="font-mono text-xs text-electric tracking-widestPlus uppercase block mb-1">[ 02 / ARCHIVE &amp; TRACK RECORD ]</span>
+<h2 class="font-headline text-3xl sm:text-4xl uppercase tracking-tight text-ink">EXPERIENCE</h2>
+</div>
+<span class="font-mono text-xs text-ink-muted uppercase mt-2 sm:mt-0 tracking-widestPlus">4 VERIFIED MILESTONES</span>
+</div>
+<!-- 4 Archival Folder Cards Stack -->
+<div class="space-y-8">
+<!-- Card 01: SETWAPRES RI -->
+<article class="bg-surface border border-line p-6 sm:p-8 hover:border-electric transition-all relative group">
+<!-- Folder Tab Accent -->
+<div class="folder-tab absolute -top-3 left-6 bg-electric text-obsidian font-mono text-[10px] font-bold uppercase tracking-widestPlus px-4 py-0.5">
+            01 // INTERNSHIP
+          </div>
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-4 mt-2 mb-6 border-b border-line/60 pb-6">
+<div>
+<span class="font-mono text-xs text-electric tracking-widestPlus uppercase block mb-1">
+                JANUARI 2026 – APRIL 2026 · PRAKTIK KERJA LAPANGAN (PKL)
+              </span>
+<h3 class="font-headline text-2xl sm:text-3xl text-ink uppercase">Sekretariat Wakil Presiden RI</h3>
+<p class="font-sans text-sm text-ink-muted mt-1">
+                Asisten Deputi Bidang Dukungan Kebijakan Pembangunan Manusia dan Pemerataan Pembangunan (Subbid Kesehatan, Gizi, dan Pembangunan Keluarga) — Jakarta Pusat
+              </p>
+</div>
+<span class="self-start font-mono text-xs px-3 py-1.5 bg-obsidian border border-line text-ink uppercase tracking-wider">
+              Instansi Pemerintah Pusat
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink-muted leading-relaxed">
+<div class="space-y-2">
+<h4 class="font-mono text-xs text-ink uppercase tracking-wider flex items-center gap-2">
+<span class="text-electric">✦</span> Penataan &amp; Pendataan Arsip
+              </h4>
+<p>Menata, mengelompokkan, dan mendata arsip inaktif kurun 2017–2025 ke dalam box arsip terstandar serta menyusun daftar berkas dan daftar isi berkas secara akurat.</p>
+</div>
+<div class="space-y-2">
+<h4 class="font-mono text-xs text-ink uppercase tracking-wider flex items-center gap-2">
+<span class="text-electric">✦</span> Pengelolaan Arsip Vital UIII
+              </h4>
+<p>Mendata dan memilah dokumen vital proyek strategis pembangunan Universitas Islam Internasional Indonesia (UIII) untuk menjamin keutuhan dan kemudahan temu kembali dokumen negara.</p>
+</div>
+<div class="space-y-2">
+<h4 class="font-mono text-xs text-ink uppercase tracking-wider flex items-center gap-2">
+<span class="text-electric">✦</span> Administrasi Deputi
+              </h4>
+<p>Mendukung proses ekspedisi surat resmi, notulensi rapat koordinasi penanganan gizi dan stunting, serta digitalisasi dokumen pendukung kebijakan wakil presiden.</p>
+</div>
+</div>
+</article>
+<!-- Card 02: POLRES PURBALINGGA -->
+<article class="bg-surface border border-line p-6 sm:p-8 hover:border-electric transition-all relative group">
+<div class="folder-tab absolute -top-3 left-6 bg-surface-hover border border-line text-ink font-mono text-[10px] font-bold uppercase tracking-widestPlus px-4 py-0.5">
+            02 // EVENT LOGISTICS &amp; JURY LIAISON
+          </div>
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-4 mt-2 mb-6 border-b border-line/60 pb-6">
+<div>
+<span class="font-mono text-xs text-electric tracking-widestPlus uppercase block mb-1">
+                2024 – 2026 (3 TAHUN BERTURUT-TURUT)
+              </span>
+<h3 class="font-headline text-2xl sm:text-3xl text-ink uppercase">POLRES Purbalingga (Satlantas &amp; Binmas)</h3>
+<p class="font-sans text-sm text-ink-muted mt-1">
+                Kepanitiaan Lomba Ketangkasan Baris Berbaris (LKBB) Bhayangkara, Polisi Cilik (Pocil), dan Patroli Keamanan Sekolah (PKS)
+              </p>
+</div>
+<span class="self-start font-mono text-xs px-3 py-1.5 bg-obsidian border border-line text-ink uppercase tracking-wider">
+              Skala Kabupaten
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink-muted leading-relaxed">
+<div class="space-y-2">
+<h4 class="font-mono text-xs text-ink uppercase tracking-wider flex items-center gap-2">
+<span class="text-electric">✦</span> Koordinasi Logistik Acara
+              </h4>
+<p>Bertanggung jawab atas inventarisasi, distribusi fasilitas perlombaan, briefing tim lapangan, serta memastikan kesiapan arena untuk puluhan kontingen sekolah.</p>
+</div>
+<div class="space-y-2">
+<h4 class="font-mono text-xs text-ink uppercase tracking-wider flex items-center gap-2">
+<span class="text-electric">✦</span> Pendampingan Dewan Juri
+              </h4>
+<p>Mendampingi dewan juri dari unsur kepolisian dan purna paskibra, mendistribusikan lembar penilaian, dan menjaga protokol sterilisasi meja rekapitulasi.</p>
+</div>
+<div class="space-y-2">
+<h4 class="font-mono text-xs text-ink uppercase tracking-wider flex items-center gap-2">
+<span class="text-electric">✦</span> Rekapitulasi Nilai Cepat
+              </h4>
+<p>Menghitung dan memvalidasi rekapitulasi nilai perlombaan dengan ketelitian 100% tanpa komplain selisih skor pada pengumuman juara resmi.</p>
+</div>
+</div>
+</article>
+<!-- Card 03: PASKAS SMKN 1 PURBALINGGA -->
+<article class="bg-surface border border-line p-6 sm:p-8 hover:border-electric transition-all relative group">
+<div class="folder-tab absolute -top-3 left-6 bg-surface-hover border border-line text-ink font-mono text-[10px] font-bold uppercase tracking-widestPlus px-4 py-0.5">
+            03 // SECRETARY BPH
+          </div>
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-4 mt-2 mb-6 border-b border-line/60 pb-6">
+<div>
+<span class="font-mono text-xs text-electric tracking-widestPlus uppercase block mb-1">
+                2024 – 2025 · BADAN PENGURUS HARIAN (BPH)
+              </span>
+<h3 class="font-headline text-2xl sm:text-3xl text-ink uppercase">Paskibra SMK Negeri 1 Purbalingga (PASKAS)</h3>
+<p class="font-sans text-sm text-ink-muted mt-1">
+                Sekretaris II — Organisasi Kedisiplinan &amp; Baris Berbaris Sekolah
+              </p>
+</div>
+<span class="self-start font-mono text-xs px-3 py-1.5 bg-obsidian border border-line text-ink uppercase tracking-wider">
+              Kesekretariatan Utama
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink-muted leading-relaxed">
+<div class="space-y-2">
+<h4 class="font-mono text-xs text-ink uppercase tracking-wider flex items-center gap-2">
+<span class="text-electric">✦</span> Tata Naskah &amp; Surat Dinas
+              </h4>
+<p>Menyusun surat permohonan izin, proposal kegiatan diklat, lembar disposisi, dan surat keputusan internal organisasi sesuai format baku perkantoran.</p>
+</div>
+<div class="space-y-2">
+<h4 class="font-mono text-xs text-ink uppercase tracking-wider flex items-center gap-2">
+<span class="text-electric">✦</span> Pengarsipan Notulensi
+              </h4>
+<p>Mendokumentasikan seluruh risalah musyawarah anggota, presensi kehadiran rutin latihan, serta memelihara buku induk keanggotaan PASKAS.</p>
+</div>
+<div class="space-y-2">
+<h4 class="font-mono text-xs text-ink uppercase tracking-wider flex items-center gap-2">
+<span class="text-electric">✦</span> Laporan Pertanggungjawaban
+              </h4>
+<p>Mengompilasi LPJ tahunan bersama Ketua dan Bendahara untuk diserahkan kepada Pembina Organisasi dan Kesiswaan SMKN 1 Purbalingga.</p>
+</div>
+</div>
+</article>
+<!-- Card 04: IKATAN SANTRI MIFTAHUSSALAM -->
+<article class="bg-surface border border-line p-6 sm:p-8 hover:border-electric transition-all relative group">
+<div class="folder-tab absolute -top-3 left-6 bg-surface-hover border border-line text-ink font-mono text-[10px] font-bold uppercase tracking-widestPlus px-4 py-0.5">
+            04 // TREASURER BPH
+          </div>
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-4 mt-2 mb-6 border-b border-line/60 pb-6">
+<div>
+<span class="font-mono text-xs text-electric tracking-widestPlus uppercase block mb-1">
+                2021 – 2022 · BADAN PENGURUS HARIAN (BPH)
+              </span>
+<h3 class="font-headline text-2xl sm:text-3xl text-ink uppercase">Ikatan Santri Miftahussalam Banyumas</h3>
+<p class="font-sans text-sm text-ink-muted mt-1">
+                Bendahara II — Pengelolaan Anggaran &amp; Iuran Rutin Komunitas
+              </p>
+</div>
+<span class="self-start font-mono text-xs px-3 py-1.5 bg-obsidian border border-line text-ink uppercase tracking-wider">
+              Manajemen Finansial
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink-muted leading-relaxed">
+<div class="space-y-2">
+<h4 class="font-mono text-xs text-ink uppercase tracking-wider flex items-center gap-2">
+<span class="text-electric">✦</span> Buku Kas &amp; Arus Dana
+              </h4>
+<p>Mencatat seluruh arus kas masuk dan keluar secara disiplin, mengarsipkan kuitansi pengeluaran, dan menyusun buku kas umum mingguan.</p>
+</div>
+<div class="space-y-2">
+<h4 class="font-mono text-xs text-ink uppercase tracking-wider flex items-center gap-2">
+<span class="text-electric">✦</span> Anggaran Acara Keagamaan
+              </h4>
+<p>Menyusun estimasi anggaran operasional peringatan hari besar Islam, santunan sosial, serta pengadaan logistik konsumsi dan perlengkapan santri.</p>
+</div>
+<div class="space-y-2">
+<h4 class="font-mono text-xs text-ink uppercase tracking-wider flex items-center gap-2">
+<span class="text-electric">✦</span> Transparansi Finansial
+              </h4>
+<p>Menyajikan laporan keuangan berkala kepada dewan pembina pondok dengan integritas penuh dan keterbukaan tanpa selisih pembukuan.</p>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- END: ExperienceSection -->
+<!-- BEGIN: SkillsSection -->
+<section class="py-24 px-6 sm:px-10 border-b border-line max-w-7xl mx-auto" data-purpose="skills-and-digital-toolkit" id="skills">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-16 pb-4 border-b border-line">
+<div>
+<span class="font-mono text-xs text-electric tracking-widestPlus uppercase block mb-1">[ 03 / CAPABILITIES ]</span>
+<h2 class="font-headline text-3xl sm:text-4xl uppercase tracking-tight text-ink">SKILLS &amp; TOOLS</h2>
+</div>
+<span class="font-mono text-xs text-ink-muted uppercase mt-2 sm:mt-0 tracking-widestPlus">CORE COMPETENCIES</span>
+</div>
+<!-- Bento Grid for Capabilities -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Bento 01: Office Administration -->
+<div class="bg-surface border border-line p-8 flex flex-col justify-between hover:border-electric transition-colors">
+<div>
+<div class="font-mono text-xs text-electric uppercase tracking-widestPlus mb-2">[ DOMAIN 01 ]</div>
+<h3 class="font-headline text-xl text-ink uppercase mb-4">Office &amp; Archiving</h3>
+<p class="text-ink-muted text-sm mb-6 leading-relaxed">
+              Standard operating procedures kearsipan negara dan penataan tata kelola dokumen modern.
+            </p>
+<ul class="space-y-3 font-mono text-xs text-ink">
+<li class="flex items-center space-x-2">
+<span class="text-electric">✓</span>
+<span>Penataan &amp; Pemilahan Arsip Inaktif</span>
+</li>
+<li class="flex items-center space-x-2">
+<span class="text-electric">✓</span>
+<span>Penyusunan Daftar Berkas &amp; Isi Berkas</span>
+</li>
+<li class="flex items-center space-x-2">
+<span class="text-electric">✓</span>
+<span>Penyimpanan Arsip Vital Instansi</span>
+</li>
+<li class="flex items-center space-x-2">
+<span class="text-electric">✓</span>
+<span>Korespondensi &amp; Tata Naskah Dinas</span>
+</li>
+<li class="flex items-center space-x-2">
+<span class="text-electric">✓</span>
+<span>Pembukuan Kas Kecil (Petty Cash)</span>
+</li>
+</ul>
+</div>
+<div class="mt-8 pt-4 border-t border-line/60 font-mono text-[10px] text-ink-muted uppercase">
+            Standar ANRI &amp; Perkantoran
+          </div>
+</div>
+<!-- Bento 02: Event Logistics & Leadership -->
+<div class="bg-surface border border-line p-8 flex flex-col justify-between hover:border-electric transition-colors">
+<div>
+<div class="font-mono text-xs text-electric uppercase tracking-widestPlus mb-2">[ DOMAIN 02 ]</div>
+<h3 class="font-headline text-xl text-ink uppercase mb-4">Event &amp; Leadership</h3>
+<p class="text-ink-muted text-sm mb-6 leading-relaxed">
+              Koordinasi lapangan, tata kelola logistik kepanitiaan, dan manajerial organisasi kepemudaan.
+            </p>
+<ul class="space-y-3 font-mono text-xs text-ink">
+<li class="flex items-center space-x-2">
+<span class="text-electric">✓</span>
+<span>Koordinasi Logistik &amp; Perlengkapan</span>
+</li>
+<li class="flex items-center space-x-2">
+<span class="text-electric">✓</span>
+<span>Liaison Officer &amp; Pendamping Dewan Juri</span>
+</li>
+<li class="flex items-center space-x-2">
+<span class="text-electric">✓</span>
+<span>Rekapitulasi Nilai &amp; Scoring Akurat</span>
+</li>
+<li class="flex items-center space-x-2">
+<span class="text-electric">✓</span>
+<span>Manajemen Waktu di Bawah Tekanan</span>
+</li>
+<li class="flex items-center space-x-2">
+<span class="text-electric">✓</span>
+<span>Kolaborasi Antar-Lembaga &amp; Relawan</span>
+</li>
+</ul>
+</div>
+<div class="mt-8 pt-4 border-t border-line/60 font-mono text-[10px] text-ink-muted uppercase">
+            Polres Purbalingga &amp; Organisasi
+          </div>
+</div>
+<!-- Bento 03: Software & Tools (My Crew) -->
+<div class="bg-surface border border-line p-8 flex flex-col justify-between hover:border-electric transition-colors">
+<div>
+<div class="font-mono text-xs text-electric uppercase tracking-widestPlus mb-2">[ DOMAIN 03 ]</div>
+<h3 class="font-headline text-xl text-ink uppercase mb-4">Software Toolkit</h3>
+<p class="text-ink-muted text-sm mb-6 leading-relaxed">
+              Instrumen komputasi harian untuk produktivitas, analisis data administratif, dan visualisasi.
+            </p>
+<div class="grid grid-cols-2 gap-3 font-mono text-xs">
+<div class="p-3 bg-obsidian border border-line flex flex-col justify-between">
+<span class="text-ink font-bold">MS WORD</span>
+<span class="text-[10px] text-ink-muted mt-1">Surat &amp; Laporan</span>
+</div>
+<div class="p-3 bg-obsidian border border-line flex flex-col justify-between">
+<span class="text-ink font-bold">MS EXCEL</span>
+<span class="text-[10px] text-ink-muted mt-1">Formula &amp; Rekap</span>
+</div>
+<div class="p-3 bg-obsidian border border-line flex flex-col justify-between">
+<span class="text-ink font-bold">GOOGLE SUITE</span>
+<span class="text-[10px] text-ink-muted mt-1">Docs &amp; Sheets</span>
+</div>
+<div class="p-3 bg-obsidian border border-line flex flex-col justify-between">
+<span class="text-ink font-bold">GOOGLE DRIVE</span>
+<span class="text-[10px] text-ink-muted mt-1">Arsip Cloud</span>
+</div>
+<div class="p-3 bg-obsidian border border-line flex flex-col justify-between">
+<span class="text-ink font-bold">CANVA</span>
+<span class="text-[10px] text-ink-muted mt-1">Visual &amp; Layout</span>
+</div>
+<div class="p-3 bg-obsidian border border-line flex flex-col justify-between">
+<span class="text-ink font-bold">KORESPONDENSI</span>
+<span class="text-[10px] text-ink-muted mt-1">Tata Naskah</span>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-line/60 font-mono text-[10px] text-ink-muted uppercase">
+            Efisiensi &amp; Ketelitian Tinggi
+          </div>
+</div>
+</div>
+</section>
+<!-- END: SkillsSection -->
+<!-- BEGIN: ContactSection -->
+<section class="py-24 px-6 sm:px-10 max-w-7xl mx-auto" data-purpose="contact-and-inquiry" id="contact">
+<div class="bg-surface border border-line p-8 sm:p-14 relative overflow-hidden">
+<!-- Eyebrow Tag -->
+<span class="font-mono text-xs text-electric tracking-widestPlus uppercase block mb-3">
+          [ 04 / LET'S CONNECT ]
+        </span>
+<!-- Massive Callout Headline -->
+<h2 class="font-headline text-3xl sm:text-5xl lg:text-6xl text-ink uppercase tracking-tight max-w-3xl leading-none">
+          READY TO CONTRIBUTE
+        </h2>
+<!-- Description Paragraph -->
+<p class="text-ink-muted text-base sm:text-lg max-w-2xl mt-6 leading-relaxed">
+          Terbuka untuk posisi staf administrasi perkantoran, asisten tata kelola arsip, koordinator kesekretariatan, maupun kepanitiaan event. Siap berdedikasi dengan ketelitian tinggi, integritas, dan semangat pembelajar.
+        </p>
+<!-- Interactive Direct Actions Pill Grid -->
+<div class="mt-10 flex flex-wrap gap-4 items-center">
+<!-- Email with Copy-to-Clipboard Action -->
+<button class="px-5 py-3.5 bg-obsidian border border-line hover:border-electric text-ink hover:text-electric transition-colors duration-200 font-mono text-xs tracking-wider uppercase flex items-center space-x-2.5" id="copyEmailBtn" onclick="copyEmailAddress()" title="Klik untuk menyalin email">
+<span>✉</span>
+<span id="emailLabel">bilqissumayya@gmail.com</span>
+<span class="text-[10px] text-electric hidden" id="copyStatus">[COPIED!]</span>
+</button>
+<!-- WhatsApp Direct Link -->
+<a class="px-5 py-3.5 bg-ink text-obsidian hover:bg-electric transition-colors duration-200 font-mono text-xs font-bold tracking-wider uppercase flex items-center space-x-2" href="https://wa.me/6285702107069?text=Halo%20Zauza%20Bilqis%20Sumayya,%20saya%20tertarik%20dengan%20profil%20dan%20portofolio%20Anda." rel="noopener noreferrer" target="_blank">
+<span>WHATSAPP: 0857-0210-7069</span>
+<span>↗</span>
+</a>
+<!-- Location Badge -->
+<div class="px-5 py-3.5 bg-surface-subtle border border-line text-ink-muted font-mono text-xs tracking-wider uppercase flex items-center space-x-2">
+<span>📍</span>
+<span>Cengkareng, JAKARTA BARAT, DKI JAKARTA</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ContactSection -->
+</main>
+<!-- BEGIN: SiteFooter -->
+<footer class="border-t border-line py-8 px-6 sm:px-10 bg-obsidian" data-purpose="site-footer">
+<div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-ink-muted tracking-widestPlus uppercase">
+<div>
+        © 2026 ZAUZA BILQIS SUMAYYA. ALL RIGHTS RESERVED.
+      </div>
+<div>
+        OFFICE ADMINISTRATION · ARCHIVING · EVENT LOGISTICS
+      </div>
+</div>
+</footer>
+<!-- END: SiteFooter -->
+<!-- JavaScript: 3D Mousemove Gaze Tilt & 4-State Snappy Avatar Poke Interaction -->
+<script data-purpose="avatar-tilt-interaction">
+    const avatarCard = document.getElementById('avatarCard');
+    const avatarImg = document.getElementById('avatarImg');
+    const pokeText = document.getElementById('pokeText');
+
+    // 4 Expressive Face States
+    const expressions = [
+      {
+        url: 'https://lh3.googleusercontent.com/aida/ALJJyrCfkJ3oVWelh5OblSXezCgVw90jREFrGU_wyJuFpa1WkLxjsHT7PkrIVz3WjeU2emv1egq3MEhNOBFljoonXYCxsF686PtuWApIsmHGcHo5axzL-eLUEe-d5rqMHbLA8iQw_8iVR5Aj68n5B5Rs9K9ENBJYiatCUgGJkUO_9Vyp3nfb-bkvT4dOlkvk51CJLTupeIpuBFqGNNepXEF2EMtOBatRR2SnTQSa6Yq7FVJ-',
+        badge: 'TAP TO POKE ✦',
+        reaction: '✦ Poked! ✦',
+        alt: "Calm friendly smile"
+      },
+      {
+        url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAZZ2nOBV1Qg9GDykHnVLxzpe7z-0bL1Pk_SfW-TaOSVUBhO7HPK483zgAILFShte_MwYGO1xmy6OEnbsSJ-f7KyNn2_rNb_XsNyFjW4IfUWciBbSEWs8BespL7HR-JAhYd82NAK0Otc0Wa5hT35697Ueuzm288mFDIv7aA81vk4aRNfUt7sxtKsil2_5xltmmvWfQZ5s4MOunp_nTW3IfbgYWW_9nIqRQcT4C2uUc',
+        badge: 'CHEEKY SMILE 😄',
+        reaction: '😄 *scrunch!*',
+        alt: "Squint & cheeky scrunch nose smile"
+      },
+      {
+        url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDxhPbr371aF-fYf_Hal_73Cq8F-va9wUJ4jcu2HfLHmkeod8bFEjDFw7r_pGRhFYZ3EOD5qYB_0a5pQYvxkSuXK-bwO5TCqgIp36SdVnQKolZi20wOUb_-WZyaDyywZCqw4PAHnPQKf9u6PknHltt70_gDpxhFZMMmBjr4Dvyx3quAEueUXN4GaofzVwuub_o-LVfW0YWWbRpgyEWHglom6CkmfCQvYnVqsERlmPc',
+        badge: 'CONFIDENT WINK 😉',
+        reaction: '😉 *wink!*',
+        alt: "Wink & confident smile"
+      },
+      {
+        url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC6UkpUuM5Ij2kiT4ZXsq1rkB5Fd90uxtBNVuJDp0sthOkkUxMD3EZQVMZk2RnJcQfI1MUsEHFghQ2zfcf_wUMg8FYj9rmMSGZJb4UWhMiYncV9hogyceDsE0MLmWL4tUsXUt8E_AUFoNHyQf3ykF_2-UyUmHBS-Q9rffz-FPckSznMaAisl1kFBdjOaZlq_9HGNiubwsFbPizk_9XvEsgOlkJyuZpzul6e5QSsw84',
+        badge: 'SURPRISED / EXCITED 😮',
+        reaction: '😮 *wow!*',
+        alt: "Surprised & wide-eyed 'O' mouth"
+      }
+    ];
+
+    let currentExpressionIdx = 0;
+
+    // Preload all 4 images on page load to eliminate flash or delay
+    expressions.forEach((item) => {
+      const preloadImg = new Image();
+      preloadImg.src = item.url;
+    });
+
+    // 3D Perspective Tilt on Mouse Movement
+    if (window.matchMedia('(pointer: fine)').matches && avatarCard) {
+      document.addEventListener('mousemove', (e) => {
+        const rect = avatarCard.getBoundingClientRect();
+        const cardCenterX = rect.left + rect.width / 2;
+        const cardCenterY = rect.top + rect.height / 2;
+
+        // Calculate offset from cursor to center of avatar
+        const deltaX = (e.clientX - cardCenterX) / (window.innerWidth / 2);
+        const deltaY = (e.clientY - cardCenterY) / (window.innerHeight / 2);
+
+        // Constrain rotation between -18 to +18 degrees for gentle 3D tracking
+        const rotateY = Math.max(-18, Math.min(18, deltaX * 20));
+        const rotateX = Math.max(-18, Math.min(18, -deltaY * 20));
+
+        avatarCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+
+      // Reset when mouse leaves window
+      document.addEventListener('mouseleave', () => {
+        avatarCard.style.transform = 'rotateX(0deg) rotateY(0deg)';
+      });
+    }
+
+    // Function to trigger floating badge particle on click
+    function spawnPokeParticle(x, y, text) {
+      if (!avatarCard) return;
+      const particle = document.createElement('div');
+      particle.className = 'floating-poke-particle font-mono text-[11px] font-bold tracking-wider uppercase bg-electric text-obsidian px-2.5 py-0.5 rounded-full shadow-lg border border-white/20 select-none';
+      particle.textContent = text;
+
+      // Position relative to avatarCard
+      const rect = avatarCard.getBoundingClientRect();
+      const relativeX = x !== undefined ? (x - rect.left) : (rect.width / 2);
+      const relativeY = y !== undefined ? (y - rect.top) : (rect.height / 3);
+
+      particle.style.left = `${Math.max(20, Math.min(rect.width - 20, relativeX))}px`;
+      particle.style.top = `${Math.max(10, Math.min(rect.height - 10, relativeY))}px`;
+
+      avatarCard.appendChild(particle);
+
+      setTimeout(() => {
+        particle.remove();
+      }, 760);
+    }
+
+    // Snappy Spring Squash-and-Stretch Cycle on Poke
+    if (avatarCard && avatarImg) {
+      avatarCard.addEventListener('click', (e) => {
+        // Increment state index 0 -> 1 -> 2 -> 3 -> 0
+        currentExpressionIdx = (currentExpressionIdx + 1) % expressions.length;
+        const nextState = expressions[currentExpressionIdx];
+
+        // Instantly update image src and alt
+        avatarImg.src = nextState.url;
+        avatarImg.alt = nextState.alt;
+
+        // Snappy squash and stretch spring animation
+        avatarImg.classList.remove('animate-squash-spring');
+        // Force reflow
+        void avatarImg.offsetWidth;
+        avatarImg.classList.add('animate-squash-spring');
+
+        // Update indicator pill
+        if (pokeText) {
+          pokeText.textContent = nextState.badge;
+        }
+
+        // Spawn floating particle near tap
+        spawnPokeParticle(e.clientX, e.clientY, nextState.reaction);
+      });
+    }
+  </script>
+<!-- JavaScript: Copy Email Address to Clipboard -->
+<script data-purpose="clipboard-action">
+    function copyEmailAddress() {
+      const email = 'bilqissumayya@gmail.com';
+      const statusSpan = document.getElementById('copyStatus');
+      
+      navigator.clipboard.writeText(email).then(() => {
+        if (statusSpan) {
+          statusSpan.classList.remove('hidden');
+          setTimeout(() => {
+            statusSpan.classList.add('hidden');
+          }, 2000);
+        }
+      }).catch(err => {
+        console.error('Could not copy email: ', err);
+      });
+    }
+  </script>
+
+
+</body></html>

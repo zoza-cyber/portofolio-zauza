@@ -1,11 +1,28 @@
-<div align="center">
+# Zauza Bilqis Sumayya — Portfolio
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Portfolio web app built with React, Vite, TypeScript, and Tailwind CSS v4 using the **Obsidian Archive** design system.
 
-  <h1>Built with AI Studio</h2>
+## Local Development
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+```bash
+npm install
+npm run dev
+```
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Production Build
 
-</div>
+```bash
+npm run lint
+npm run build
+```
+
+## Deploy to Vercel
+
+Project ini sudah dikonfigurasi dengan `vercel.json` untuk deployment langsung di Vercel:
+
+1. Push repository ini ke GitHub/GitLab/Bitbucket, lalu import project di **Vercel Dashboard** (atau jalankan `npx vercel --prod` via Vercel CLI).
+2. Vercel otomatis mendeteksi pengaturan dari `vercel.json`:
+   - **Framework Preset**: `Vite`
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+3. **Environment Variables**: Tidak ada environment variable wajib yang perlu diisi (aplikasi ini berjalan sepenuhnya sebagai static SPA).

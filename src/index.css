@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #111111;
+  --color-surface: #1A1A1A;
+  --color-surface-hover: #242424;
+  --color-surface-subtle: #151515;
+  --color-ink: #F4F4F2;
+  --color-ink-muted: #9A9A96;
+  --color-electric: #38BDF8;
+  --color-electric-soft: rgba(56, 189, 248, 0.14);
+  --color-line: rgba(255, 255, 255, 0.12);
+
+  --font-headline: "Archivo Black", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --tracking-widestPlus: 0.14em;
+  --tracking-tightPlus: -0.03em;
+}
+
+/* Metallic Silver Gradient for Hero Typography */
+.metallic-headline {
+  background: linear-gradient(180deg, #FFFFFF 0%, #CBD2D9 42%, #8E96A0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 0.88;
+}
+
+/* Subdued subtle dot grid background pattern */
+.bg-grid-subtle {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Smooth Marquee Animation */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Folder Tab Aesthetic */
+.folder-tab {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 100%, 0% 100%);
+}
+
+/* 3D Avatar Tilt Container */
+.avatar-tilt-wrapper {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.avatar-mesh {
+  transition: transform 0.14s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Snappy squash and stretch spring keyframe */
+@keyframes avatarSquashSpring {
+  0% {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(0.92, 1.08);
+  }
+  65% {
+    transform: scale(1.05, 0.95);
+  }
+  85% {
+    transform: scale(0.98, 1.02);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.animate-squash-spring {
+  animation: avatarSquashSpring 0.42s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Floating poke particle */
+@keyframes particleFloatUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0px) scale(0.7);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -15px) scale(1.15);
+  }
+  80% {
+    opacity: 0.9;
+    transform: translate(-50%, -40px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -60px) scale(0.85);
+  }
+}
+
+.floating-poke-particle {
+  position: absolute;
+  pointer-events: none;
+  animation: particleFloatUp 0.75s ease-out forwards;
+  z-index: 40;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-squash-spring,
+  .floating-poke-particle {
+    animation: none !important;
+  }
+  .avatar-mesh {
+    transition: none !important;
+  }
+}
+
+/* Print Styles for CV Modal */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only-sheet {
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
+    border: none !important;
+    background: #ffffff !important;
+    color: #111111 !important;
+    box-shadow: none !important;
+  }
+}
